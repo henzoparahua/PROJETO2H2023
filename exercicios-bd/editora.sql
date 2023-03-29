@@ -1,0 +1,42 @@
+DROP DATABASE IF EXISTS Editora;
+CREATE DATABASE IF NOT EXISTS Editora;
+USE Editora;
+
+CREATE TABLE Livrarias(
+   IDLivraria INT NOT NULL
+);
+
+CREATE TABLE NotasFiscais(
+   CodigoVenda INT NOT NULL PRIMARY KEY,
+   DataVenda date NOT NULL,
+   IDLivraria INT NOT NULL
+);
+
+CREATE TABLE ItensNF(
+   CodigoVenda INT NOT NULL,
+   IDLivro INT NOT NULL,
+   QtdeVendida INT NOT NULL
+);
+
+CREATE TABLE Livros(
+   IDLivro INT NOT NULL PRIMARY KEY,
+   Autor VARCHAR(30) NOT NULL
+);
+
+ALTER TABLE Livrarias
+   ADD CONSTRAINT PK_IDLivraria PRIMARY KEY (IDLivraria),
+   ADD COLUMN NomeLivraria VARCHAR(30) NOT NULL,
+   ADD COLUMN Endereco VARCHAR(50) NOT NULL,
+   ADD COLUMN CNPJ VARCHAR(14) NOT NULL;
+
+ALTER TABLE NotasFiscais
+   ADD CONSTRAINT FK_NotasFiscais_Livrarias FOREIGN KEY (IDLivraria)
+      REFERENCES Livrarias(IDLivraria); 
+
+ALTER TABLE ItensNF
+   ADD CONSTRAINT PK_CodigoVenda PRIMARY KEY (CodigoVenda),
+   ADD CONSTRAINT FK_ItensNF_Livros FOREIGN KEY (IDLivro)
+      REFERENCES Livros(IDLivro);
+ALTER TABLE Livros
+   ADD COLUMN TituloLivro VARCHAR(30) NOT NULL AFTER IDLivro,
+   ADD COLUMN PrecoUnitario decimal (5,2) NOT NULL;
