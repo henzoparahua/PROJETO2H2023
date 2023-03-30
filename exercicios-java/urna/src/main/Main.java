@@ -48,7 +48,8 @@ public class Main {
                         case 3:
                             System.out.println("Você votou no Tonhão do Gaz!");
                             System.out.println("\nRetornando ao menu...\n");
-
+                            
+                            tonhaogaz++;
                             break;
                         default:
                             System.out.println("Candidato não existente");
