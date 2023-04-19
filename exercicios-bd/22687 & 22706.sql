@@ -1,3 +1,8 @@
+
+/** 
+ * Henzo Possebon Ayres RM22706 & Henrique Silva Barbosa RM22687
+ * */
+
 DROP DATABASE IF EXISTS fipe;
 CREATE DATABASE IF NOT EXISTS fipe;
 USE fipe;
@@ -134,5 +139,15 @@ values
 (97,'Mitsubishi','3000 GT VR-4','1998','105035.00'),
 (98,'Mitsubishi','3000 GT VR-4','1997','102473.00'),
 (99,'Mitsubishi','3000 GT VR-4','1996','99973.00'),
-(100,'Mitsubishi','3000 GT VR-4','1995','97534.00'),
+(100,'Mitsubishi','3000 GT VR-4','1995','97534.00')
 ;
+
+SELECT * FROM Carros;
+
+SELECT CODCarro, Modelo, Ano FROM carros;
+
+SELECT * FROM carros ORDER BY modelo ASC;
+
+SELECT * FROM carros ORDER BY preco DESC;
+
+SELECT modelo, ano, preco FROM carros ORDER BY fabricante ASC;
