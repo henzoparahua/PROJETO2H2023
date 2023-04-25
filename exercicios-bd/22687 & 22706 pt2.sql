@@ -139,10 +139,33 @@ values
 (97,'Mitsubishi','3000 GT VR-4','1998','105035.00'),
 (98,'Mitsubishi','3000 GT VR-4','1997','102473.00'),
 (99,'Mitsubishi','3000 GT VR-4','1996','99973.00'),
-(100,'Mitsubishi','3000 GT VR-4','1995','97534.00')
-;
+(100,'Mitsubishi','3000 GT VR-4','1995','97534.00'),
 
-SELECT * FROM Carros;
+(101, 'Hyundai','Accent GLs', '2001','13672.00'),
+(102, 'Hyundai','Accent GLs', '2000','11809.00'),
+(103, 'Hyundai','Accent GLs', '1999','9209.00'),
+(104, 'Hyundai','Accent GLs', '1998','8887.00'),
+
+(105, 'Hyundai','AZERA GLS', '2011','44094.00'),
+(106, 'Hyundai','AZERA GLS', '2010','38619.00'),
+(107, 'Hyundai','AZERA GLS', '2009','36162.00'),
+(108, 'Hyundai','AZERA GLS', '2008','33326.00'),
+
+(109, 'Hyundai','Creta Attitude', '2021','93421.00'),
+(110, 'Hyundai','Creta Attitude', '2020','91085.00'),
+(111, 'Hyundai','Creta Attitude', '2019','87445.00'),
+(112, 'Hyundai','Creta Attitude', '2018','83945.00'),
+
+(113, 'Hyundai','Excel GLS', '1995','4910.00'),
+(114, 'Hyundai','Excel GLS', '1994','4774.00'),
+(115, 'Hyundai','Excel GLS', '1993','4397.00'),
+(116, 'Hyundai','Excel GLS', '1992','3563.00'),
+
+(117, 'Hyundai','HB20 Comfort Plus', '2019','60291.00'),
+(118, 'Hyundai','HB20 Comfort Plus', '2018','54300.00'),
+(119, 'Hyundai','HB20 Comfort Plus', '2017','51152.00'),
+(120, 'Hyundai','HB20 Comfort Plus', '2023','82141.00');
+
 
 SELECT CODCarro, Modelo, Ano FROM carros;
 
