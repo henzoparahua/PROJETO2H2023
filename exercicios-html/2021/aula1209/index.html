@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<h1>Formularios</h1>
+
+ <!-- hr desenha uma linha horizontal	-->
+<hr>
+
+<!-- 
+		Existem 2 metodos
+		
+		O Get
+		metodo get aparece no URL
+		mais rapido
+
+		O Post
+		metodo post é mais seguro
+-->
+
+<form action="obrigado.html" method="POST">
+
+<fieldset>	
+	<legend>Dados de LogIn</legend>
+	<label>Nome:</label>
+	<input type="text" name="Nome" required >
+	<br><br>
+	<label>Senha:</label>
+	<input type="password" name="Senha" required>
+	<br><br>
+
+</fieldset>	
+
+<fieldset>	
+	<legend>Dados Pessoais</legend>
+
+	<label>Endereço:</label>
+	<input type="text" name="endereco" size="70" maxlength="60">
+
+	<br><br>
+
+	<input type="radio" name="sexo" checked>
+	<label>Masculino</label>
+	<br>
+	<input type="radio" name="sexo">
+	<label>Feminino</label>
+	<br><br>
+
+	Aparelhos que possue: <br>
+
+	<input type="checkbox" name="tv">
+	<label>Televisão</label>
+	<br>
+
+	<input type="checkbox" name="cel">
+	<label>Celular</label>
+	<br>
+
+	<input type="checkbox" name="pc">
+	<label>Computador</label>
+	<br>
+	<br><br>
+	Escolha seu carro:
+
+	<select name="Carro">
+		
+		<option value="ka">Ford KA</option>
+		<option value="fusca">Fusca</option>
+		<option value="golf">Golf 5.0</option>
+		<option value="ferrari">Ferrari</option>
+
+	</select>
+
+	<br><br>
+
+Sugestão:	<br>
+	
+	<textarea name="sugestao" rows="10" cols="50">	</textarea>
+
+
+
+
+</fieldset>
+	
+<fieldset>
+	<input type="submit" value="Enviar">
+	<input type="reset" value="Limpar">
+
+	<!-- vantagem do button:
+			vc pode colocar img
+			-->
+	<button>Enviar</button>
+	<button>
+		<img src="send.png" alt="img send" height="20">
+	</button>
+</fieldset>
+</form>
+
+</body>
+</html>

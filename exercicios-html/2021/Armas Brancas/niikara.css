@@ -1,0 +1,54 @@
+*{
+	background-color: #111;
+	margin: 0;
+}
+li a:hover{
+	background-color: #555;
+	color:white;
+}
+	.roma:hover{
+	background-image: url(img/guardie_romane.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.china:hover{
+	background-image: url(img/three_brothers_china.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	li a:hover{
+	opacity: 0.3;
+}
+p{
+	margin-bottom:10px;
+	text-align: justify;
+	color: white;
+	font-size: 18px;
+}
+img{
+	opacity: 0.5;
+	border: thin solid #000;
+	margin-bottom: 3px;
+}
+img:hover{
+	opacity: 1;
+}
+.estrutura{
+	width: 800px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom:50px;
+	margin-left: auto; 
+	float: none;
+}
+
+h2{
+	font-size: 30px;
+	color: salmon;
+	text-align: center;
+	text-decoration: none;
+	font-style: italic;
+	border-bottom: thin solid salmon;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
