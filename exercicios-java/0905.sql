@@ -8,25 +8,30 @@ CREATE TABLE Cliente(
 	Celular BIGINT NULL,
 	NomeCliente VARCHAR (30) NOT NULL,
 	CPFCliente BIGINT NOT NULL,
-	Pago BOOLEAN NOT NULL
-);
-CREATE TABLE Remetente(
-	IDRemetente INT NOT NULL PRIMARY KEY,
-	Telefone BIGINT NULL,
-	Celular BIGINT NULL,
-	Celular2 BIGINT NULL,
-	NomeRemetente VARCHAR (30) NOT NULL
+	Pago BOOLEAN NOT NULL,
+	NomeRemetente VARCHAR (30) NOT NULL,
+	CelularRemetente BIGINT NULL,
+	CelularRemetente2 BIGINT NULL,
+	TelefoneRemetente BIGINT NULL,
+
 );
 
 CREATE TABLE Mensagem(
 	IDMensagem INT NOT NULL PRIMARY KEY,
+	TipoMensagem VARCHAR(30) NOT NULL,
+	Descrição VARCHAR(50) NOT NULL,
+	Mensagem VARCHAR(200) NOT NULL,
+);
+
+CREATE TABLE envio(
+	IDEnvio INT NOT NULL PRIMARY KEY, 
+	IDMensagem INT NOT NULL,
 	IDCliente INT NOT NULL,
 	IDRemetente INT NOT NULL,
-	TipoMensagem VARCHAR(30) NOT NULL,
-	Mensagem VARCHAR(200) NOT NULL,
-	OBS VARCHAR(100) NULL,
-	CONSTRAINT FK_Mensagem_Cliente FOREIGN KEY(IDCliente)
+	CONSTRAINT FK_Envio_Cliente FOREIGN KEY(IDCliente)
 	REFERENCES Cliente(IDCliente),
-	CONSTRAINT FK_Mensagem_Remetente FOREIGN KEY(IDRemetente)
-	REFERENCES Remetente(IDRemetente)
+	CONSTRAINT FK_Envio_Remetente FOREIGN KEY(IDRemetente)
+	REFERENCES Remetente(IDRemetente),
+	CONSTRAINT FK_Envio_mensagem FOREIGN KEY(IDMensagem)
+	REFERENCES Mensagem(IDMensagem)
 );
