@@ -91,3 +91,15 @@ SELECT * from Filmes ORDER BY Preco DESC;
 SELECT NomeCliente, Telefone  from Clientes ORDER BY Estado ASC;
 
 SELECT * from ItensAlugados ORDER BY IDFilme ASC;
+
+/* CORREÇÃO: */
+
+UPDATE Alugueis
+	SET DataAluguel = '2021-08-16', DataDevolucao = '2021-08-18'
+	WHERE CodAluguel BETWEEN '1' AND '2';
+UPDATE Alugueis
+	SET DataAluguel = '2021-08-17', DataDevolucao = '2021-08-19'
+	WHERE CodAluguel = '3';
+UPDATE Alugueis
+	SET DataAluguel = '2021-08-19', DataDevolucao = '2021-08-21'
+	WHERE CodAluguel BETWEEN '4' AND '5';
