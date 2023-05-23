@@ -124,9 +124,19 @@
         justify-content: center;
     }
     .resultadoContainer{
-        justify-items: auto;
         width: auto;
         margin: 0;
         padding: 0;
     }
-    
+
+    .echoContainer{
+        width: 100%;
+        font-size: 1.4em;
+        margin-left: 6em;
+        margin-right: auto;
+    }
+    .echoCase{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
