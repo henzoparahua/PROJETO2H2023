@@ -6,15 +6,27 @@
     <title>Formulário - IMC</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <script>
+        function aceitarApenasNumeros(event) {
+            let keyCode = event.keyCode || event.which;
+            let keyValue = String.fromCharCode(keyCode);
+            let regex = /[0-9]|\.|\,/; // Aceita números, ponto e vírgula
+            if (!regex.test(keyValue)) {
+                event.preventDefault();
+                return false;
+            }
+        }
     function formatarForms(input, i) {
-        var valor = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        let valor = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
         if (valor.length > i) {
-        valor = valor.substring(0, i) + '.' + valor.substring(i); // Insere o ponto após o primeiro dígito
+            if (valor.length > 4) {
+                valor = valor.substring(0,i+1) + '.' + valor.substring(i)
+            } else{
+            valor = valor.substring(0, i) + '.' + valor.substring(i); // Insere o ponto após o primeiro dígito
+            }
         if (valor.length > input.maxLength) {
         valor = valor.substring(0, input.maxLength); // Limita o valor ao maxlength
         }
         input.value = valor;
-        
   }
 }
     </script>
@@ -27,12 +39,14 @@
             <label for="altura">Altura</label>
             <small>(ex.: 1,86)</small>
             <input type="text" name="altura" maxlength="4" placeholder="Metros" id="altura_input" 
-            autocomplete="off" onkeyup="formatarForms(this, 1)" class="input_imc">
+            autocomplete="off" onkeyup="formatarForms(this, 1)" onkeypress="aceitarApenasNumeros(event)" 
+            class="input_imc">
         </span><span class="span_imc">
         <label for="peso">Peso</label>
         <small>(ex.: 68.40)</small> 
-        <input type="text" name="peso" maxlength="5" placeholder="Quilos" id="peso_input" 
-        autocomplete="off" onkeyup="formatarForms(this, 2)" class="input_imc">
+        <input type="text" name="peso" maxlength="6" placeholder="Quilos" id="peso_input" 
+        autocomplete="off" onkeyup="formatarForms(this, 2)" onkeypress="aceitarApenasNumeros(event)" 
+        class="input_imc">
         </span> 
         <div class="btn_div">
                 <button class="btn_container" type="submit">
