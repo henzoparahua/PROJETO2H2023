@@ -1,0 +1,44 @@
+	#formul{
+		width: 400px;
+		height: 300px;
+		background-color: whitesmoke;
+		box-sizing: border-box;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border: thin solid black;
+		padding: 10px;
+	}
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 16px;
+	}
+	.p1{
+		box-sizing: border-box;
+		float: left;
+	}
+	.p2{
+		box-sizing: border-box;
+		float: right;
+	}
+	.inp1{
+		margin-right: auto;
+		margin-left: auto;
+		top: 50%;
+		border: solid;
+	}
+	#resultado{
+		justify-content: center;
+		margin-top: 10px;
+		width: 300px;
+		height: 75px;
+		background-color: whitesmoke;
+		box-sizing: border-box;
+		display: none;
+		margin-left: auto;
+		margin-right: auto;
+		border: thin solid black;
+		padding: 10px;
+	}
