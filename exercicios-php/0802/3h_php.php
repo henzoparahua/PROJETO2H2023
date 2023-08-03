@@ -12,7 +12,7 @@
     mysqli_query($con, $sql2);
     
 
-    $sql = "SELECT Nome, Sobrenome FROM tbPessoa";
+    $sql = "SELECT * FROM tbPessoa";
 
     $resultado = mysqli_query($con, $sql);
 
@@ -20,7 +20,7 @@
 
     while($pessoa = mysqli_fetch_array($resultado)){
 
-        echo $pessoa['Nome']. " " .$pessoa['Sobrenome']."<br><br>";
+        echo $pessoa['nome']. " " .$pessoa['sobrenome']. "-" .$pessoa['idade']."anos <br><br>";
     }
 
     mysqli_close($con);
