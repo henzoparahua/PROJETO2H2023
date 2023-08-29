@@ -18,5 +18,6 @@
     $carro = new carro();
 
     $carro->Acelerar();
+    $carro->printa();
 
 ?>
