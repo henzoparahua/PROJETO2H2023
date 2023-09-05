@@ -1,6 +1,6 @@
 <?php 
 
-	class Pessoa
+	class conta
 	{
 		var $agencia;
 		var $codigo;
