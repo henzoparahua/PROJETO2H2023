@@ -16,7 +16,7 @@
 	$carlos->escolaridade = "Ensino fundamental";
 
 
-	echo "Manipulando objeto $calor->Nome : \n";
+	echo "Manipulando objeto $carlos->Nome : \n";
 	echo "{$carlos->Nome} é formador em : {$carlos->escolaridade} \n";
 
 	$carlos->Formar('Técnico em eletricidade');
