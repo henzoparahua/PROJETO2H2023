@@ -1,30 +1,30 @@
 <?php 
-	
+
 	class Pessoa
 	{
+		var $agencia;
 		var $codigo;
-		var $nome;
-		var $altura;
-		var $idade;
-		var $nascimento;
-		var $escolaridade;
-		var $salario;
+		var $dataDeCriacao;
+		var $titular;
+		var $senha;
+		var $saldo;
+		var $cancelada;
 
-		function crescer($centimetros){
+		function retirar($quantia){
 			if ($centimetros > 0) {
-				$this->altura += $centimetros;
+				$this->saldo -= $quantia;
 			}
 		}
 
-		function formar($titulacao){
-			$this->escolaridade = $titulacao;
+		function depositar($quantia){
+			if($quantia > 0){
+			$this->saldo += $quantia;
+		}
 		}
 
 
-		function envelhecer($anos){
-			if ($anos > 0) {
-				$this->idade += $anos;
-			}
+		function obterSaldo(){
+			return $this->saldo;
 		}
 	}
  ?>
