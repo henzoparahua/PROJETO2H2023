@@ -17,7 +17,7 @@
 	$conta_carlos->cancelada = false;
 
 
-	echo "\n"
+	echo "\n";
 	echo "Manipulando a conta de: {$conta_carlos->titular->Nome} \n";
 	echo "O saldo atual é R\$ {$conta_carlos->ObterSaldo()} \n";
 

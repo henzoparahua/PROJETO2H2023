@@ -8,8 +8,9 @@
 	# CRIAÇÃO DO OBJETO CARLOS
 
 	$carlos = new Pessoa();
+
 	$carlos->Codigo = 10;
-	$carlos->Nome = "Carlos da Silva";
+	$carlos->Nome = 'Carlos da Silva';
 	$carlos->altura = 1.85;
 	$carlos->idade = 25;
 	$carlos->Nascimento = '10/04/1976';
